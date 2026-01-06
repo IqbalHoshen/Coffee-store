@@ -1,6 +1,6 @@
 import Multi_Title from "./Multi_Title";
 import buttonIcon from "../assets/images/icons/Vector.svg";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import { useState } from "react";
 import CoffeeCard from "./Coffee_Card";
 import bgLeftImg from "../assets/images/more/4.png";
@@ -25,10 +25,13 @@ const Popular_Products = () => {
         <div>
           <Multi_Title titleString={titleString}></Multi_Title>
 
-          <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-secondary btn-outline btn-primary text-white text-2xl mt-6 text-shadow-lg/30">
+          <Link
+            to="/add-coffee"
+            className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-secondary btn-outline btn-primary text-white text-2xl mt-6 text-shadow-lg/30"
+          >
             <span> Add Coffee</span>
             <img src={buttonIcon} alt="Icon" className="mt-2" />
-          </button>
+          </Link>
         </div>
         <div className="grid grid-cols-2 gap-4 mt-12">
           {coffeeData.map((item) => (

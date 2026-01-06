@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import HomeLayout from "./layout/HomeLayout";
 import Popular_Products from "./component/Popular_Products";
+import CoffeeAddLayout from "./layout/CoffeeAddLayout";
 // import Loader from "./layout/Loader";
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
         // HydrateFallback: <Loader></Loader>,
       },
     ],
+  },
+  {
+    path: "/add-coffee",
+    element: <CoffeeAddLayout></CoffeeAddLayout>,
   },
 ]);
 
